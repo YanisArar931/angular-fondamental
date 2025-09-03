@@ -19,9 +19,8 @@ import { AuthService } from '../../../features/auth/services/auth';
               }
               <li><button (click)="logout()" class="hover:text-blue-200">Logout</button></li>
             } @else {
-              <li><a routerLink="/login" class="hover:text-blue-200">Login</a></li>
-              <li><a routerLink="/register" class="hover:text-blue-200">Register</a></li>
-              <li><a routerLink="/logout" class="hover:text-blue-200">Logout</a></li>
+              <li><a routerLink="/auth/login" class="hover:text-blue-200">Login</a></li>
+              <li><a routerLink="/auth/register" class="hover:text-blue-200">Register</a></li>
             }
           </ul>
         </nav>

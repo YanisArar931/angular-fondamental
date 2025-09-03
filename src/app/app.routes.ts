@@ -1,13 +1,8 @@
 import { Routes } from '@angular/router';
 import { authGuard } from './core/guards/auth.guard';
-// import { adminGuard } from './core/guards/admin.guard';
+import { adminGuard } from './core/guards/admin.guard';
 
 export const routes: Routes = [
-  // {
-  //   path: '',
-  //   redirectTo: '/auth/login',
-  //   pathMatch: 'full',
-  // },
   {
     path: '',
     redirectTo: '/todos',
@@ -24,9 +19,9 @@ export const routes: Routes = [
     loadChildren: () => import('./features/todos/todos.routes').then((m) => m.TODOS_ROUTES),
   },
 
-  // {
-  //   path: 'admin',
-  //   canActivate: [authGuard, adminGuard],
-  //   loadChildren: () => import('./features/admin/admin.routes').then(m => m.ADMIN_ROUTES)
-  // }
+  {
+    path: 'admin',
+    canActivate: [authGuard, adminGuard],
+    loadChildren: () => import('./features/admin/admin.routes').then((m) => m.ADMIN_ROUTES),
+  },
 ];
