@@ -11,7 +11,7 @@ import { HighlightDirective } from '../../../shared/directives/highlight.directi
   standalone: true,
   imports: [CommonModule, FormsModule, PriorityPipe, HighlightDirective],
   template: ` <!-- Dashboard des statistiques -->
-    <div class="mb-8">
+    <div class="p-6">
       <h2 class="text-2xl font-bold text-gray-900 mb-4">Statistiques en temps réel</h2>
       <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
         <div class="bg-white p-4 rounded-lg shadow">
@@ -102,7 +102,7 @@ import { HighlightDirective } from '../../../shared/directives/highlight.directi
         <!-- Liste des todos -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
           <!-- Colonne Todo -->
-          <div class="bg-gray-100 p-4 rounded-lg">
+          <div class="space-y-3">
             <h3 class="text-lg font-semibold mb-4 text-gray-700">
               À faire ({{ getTodosByStatus('todo').length }})
             </h3>
@@ -160,7 +160,7 @@ import { HighlightDirective } from '../../../shared/directives/highlight.directi
           </div>
 
           <!-- Colonne In Progress -->
-          <div class="bg-gray-100 p-4 rounded-lg">
+          <div class="space-y-3">
             <h3 class="text-lg font-semibold mb-4 text-blue-700">
               En cours ({{ getTodosByStatus('in-progress').length }})
             </h3>
@@ -218,7 +218,7 @@ import { HighlightDirective } from '../../../shared/directives/highlight.directi
           </div>
 
           <!-- Colonne Done -->
-          <div class="bg-gray-100 p-4 rounded-lg">
+          <div class="space-y-3">
             <h3 class="text-lg font-semibold mb-4 text-green-700">
               Terminé ({{ getTodosByStatus('done').length }})
             </h3>
